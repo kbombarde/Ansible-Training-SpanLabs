@@ -1,0 +1,1000 @@
+   49  ansible all --list-host
+   50  pwd
+   51  nano ansible.cfg 
+   52  ansible all --list-host
+   53  nano ansible.cfg
+   54  ansible all --list-host
+   55  nano inventory
+   56  n
+   57  nano ansible.cfg
+   58  nano inventory
+   59  ansible all --list-host
+   60  nano ansible.cfg
+   61  ansible all -m ping
+   62  nano ansible.cfg
+   63  ansible all -m ping dev
+   64  nano inventory
+   65  ansible -m ping dev
+   66  ansible all -m user -a "name=kshitij state=present"
+   67  ansible all -m command -a "id kshitij"
+   68  nano ansible.cfg
+   69  ansible all -m user -a "name=kshitij state=absent"
+   70  ansible all -m command -a "id kshitij"
+   71  ansible dev -m shell -a "ls || mkdir abcd"
+   72  ansible dev -m shell -a "ls"
+   73  ansible all -m command -a "ls"
+   74  ansible dev -m command -a "ls"
+   75  ansible all -m group -a "name=group state=present"
+   76  ansible all -m group -a "name=group state=absent"
+   77  ansible all -m yum -a "name=httpd state=present"
+   78  ansible all -m yum -a "name=httpd state=absent"
+   79  ansible all -m file -a "path=/test.txt state=touch"
+   80  ansible dev -m copy -a "source=/test.txt destination=/src/local"
+   81  ansible dev -m copy -a "src=/test.txt dest=/src/local"
+   82  nano inventory
+   83  ansible dev -m copy -a "src=test.txt dest=/usr/local"
+   84  ansible dev -m copy -a "src=test.txt dest=/usr/local/test.txt"
+   85  ansible dev -m copy -a "src=/test.txt dest=/usr/local/test.txt"
+   86  ansible dev -m command -a "ls"
+   87  ansible dev -m command -a "cd /"
+   88  ansible dev -m command -a "ls"
+   89  ansible dev -m copy -a "src /test.txt dest /usr/local/test.txt"
+   90  ansible dev -m copy -a "src=/test.txt dest=/usr/local/test.txt"
+   91  ansible dev -m copy -a "src=/test.txt dest=/usr/local/test.txt mode=0644"
+   92  ansible dev -m copy -a "src=/test.txt dest=/usr/local/test.txt mode='0644'"
+   93  ansible dev -m copy -a "src=/test.txt dest=/usr/local/test.txt owner=student group=root  mode='644'"
+   94  ansible dev -m copy -a "src=./test.txt dest=/usr/local/test.txt owner=student group=root  mode='644'"
+   95  ansible dev -m copy -a "src=test.txt dest=/usr/local/ owner=student group=root  mode='644'"
+   96  ansible dev -m Copy -a "src=test.txt dest=/usr/local/ owner=student group=root mode='644'"
+   97  ansible dev -m copy -a "src=/test.txt dest=/usr/local/test.txt"
+   98  ansible dev -m copy -a "src=/test.txt dest=/usr/local/test.txt remote_src=true"
+   99  ls
+  100  touch playbook.yaml
+  101  nano playbook.yaml
+  102  ansible-playbook -C playbook.yaml
+  103  nano playbook.yaml
+  104  ansible-playbook -C playbook.yaml
+  105  nano playbook.yaml
+  106  ansible-playbook -C playbook.yaml
+  107  nano playbook.yaml
+  108  ansible-playbook -C playbook.yaml
+  109  vim playbook.yaml 
+  110  ansible-playbook playbook.yaml
+  111  ansible all -m command -a "id barry"
+  112  ansible-playbook --syntax-check playbook.yaml
+  113  nano playbook.yaml
+  114  ansible-playbook --syntax-check playbook.yaml
+  115  nano playbook.yaml
+  116  ansible-playbook --syntax-check playbook.yaml
+  117  nano playbook.yaml
+  118  ansible-playbook --syntax-check playbook.yaml
+  119  ansible-playbook -C playbook.yaml
+  120  ansible-playbook --syntax-check playbook.yaml
+  121  ansible-playbook -C playbook.yaml
+  122  nano playbook.yaml
+  123  ansible-playbook -C playbook.yaml
+  124  ansible-playbook playbook.yaml
+  125  nano playbook.yaml
+  126  ssh root@serverd
+  127  ssh root@serverc
+  128  ssh root@servera
+  129  ssh root@serverb
+  130  ssh root@servera
+  131  ssh root@serverc
+  132  ls
+  133  cd ansible/
+  134  ls
+  135  ansible -m ping all
+  136  ls
+  137  touch multiplay-playbook.yaml
+  138  ls
+  139  ansible -m ping dev
+  140  ansible -m ping prod
+  141  nano multiplay-playbook.yaml 
+  142  ansible-playbook --syntax-check multiplay-playbook.yaml 
+  143  nano multiplay-playbook.yaml 
+  144  y
+  145  ansible-playbook --syntax-check multiplay-playbook.yaml 
+  146  nano multiplay-playbook.yaml 
+  147  ansible-playbook --syntax-check multiplay-playbook.yaml 
+  148  nano multiplay-playbook.yaml 
+  149  ansible-playbook --syntax-check multiplay-playbook.yaml 
+  150  nano multiplay-playbook.yaml 
+  151  ansible-playbook --syntax-check multiplay-playbook.yaml 
+  152  ansible-playbook -C multiplay-playbook.yaml 
+  153  nano multiplay-playbook.yaml 
+  154  ansible-playbook -C multiplay-playbook.yaml 
+  155  nano multiplay-playbook.yaml 
+  156  ansible-playbook -C multiplay-playbook.yaml 
+  157  nano multiplay-playbook.yaml 
+  158  vim multiplay-playbook.yaml 
+  159  nano multiplay-playbook.yaml 
+  160  vim multiplay-playbook.yaml 
+  161  ansible-playbook -C multiplay-playbook.yaml 
+  162  ansible-playbook multiplay-playbook.yaml 
+  163  nano multiplay-playbook.yaml 
+  164  ansible-playbook multiplay-playbook.yaml 
+  165  curl -I http://172.25.250.10
+  166  ansible-doc ufw
+  167  ansible-doc firewalld
+  168  ansible-doc firewall
+  169  ansible-doc -l
+  170  nano multiplay-playbook.yaml 
+  171  ansible-playbook --syntax-check multiplay-playbook.yaml 
+  172  nano multiplay-playbook.yaml 
+  173  ansible-playbook --syntax-check multiplay-playbook.yaml 
+  174  nano multiplay-playbook.yaml 
+  175  ansible-playbook --syntax-check multiplay-playbook.yaml 
+  176  ansible-doc -l
+  177  nano multiplay-playbook.yaml 
+  178  ansible-playbook --syntax-check multiplay-playbook.yaml 
+  179  nano multiplay-playbook.yaml 
+  180  ansible-playbook --syntax-check multiplay-playbook.yaml 
+  181  nano multiplay-playbook.yaml 
+  182  ansible-playbook multiplay-playbook.yaml 
+  183  nano multiplay-playbook.yaml 
+  184  touch variable-practice.yaml
+  185  nano variable-practice.yaml 
+  186  nano multiplay-playbook.yaml 
+  187  nano variable-practice.yaml 
+  188  ansible-playbook -C variable-practice.yaml 
+  189  nano variable-practice.yaml 
+  190  ansible-playbook -C variable-practice.yaml 
+  191  nano variable-practice.yaml 
+  192  ansible-playbook -C variable-practice.yaml 
+  193  nano variable-practice.yaml 
+  194  ansible-playbook -C variable-practice.yaml 
+  195  nano variable-practice.yaml 
+  196  ansible-playbook -C variable-practice.yaml 
+  197  nano variable-practice.yaml 
+  198  ansible-playbook -C variable-practice.yaml 
+  199  nano variable-practice.yaml 
+  200  touch variable.yaml
+  201  nano variable
+  202  nano variable.yaml 
+  203  ansible-playbook -C variable-practice.yaml 
+  204  nano variable.yaml 
+  205  nano variable-practice.yaml 
+  206  ansible-playbook -C variable-practice.yaml 
+  207  touch variable-practice-2.yaml
+  208  nano variable-practice-2.yaml 
+  209  nano variable.yaml 
+  210  ansible-playbook -C variable-practice-2.yaml 
+  211  nano variable.yaml 
+  212  nano variable-practice-2.yaml 
+  213  ansible-playbook -C variable-practice-2.yaml 
+  214  nano variable-practice-2.yaml 
+  215  ansible-playbook -C variable-practice-2.yaml 
+  216  nano variable.yaml 
+  217  ansible-playbook -C variable-practice-2.yaml 
+  218  nano variable.yaml 
+  219  ansible-playbook -C variable-practice-2.yaml 
+  220  nano variable-practice-2.yaml 
+  221  nano variable.yaml 
+  222  ansible-playbook -C variable-practice-2.yaml 
+  223  nano variable-practice-2.yaml 
+  224  nano variable.yaml 
+  225  ansible-playbook -C variable-practice-2.yaml 
+  226  nano variable-practice-2.yaml 
+  227  nano variable.yaml 
+  228  nano variable-practice-2.yaml 
+  229  ansible-playbook -C variable-practice-2.yaml 
+  230  nano variable.yaml 
+  231  ansible-playbook -C variable-practice-2.yaml 
+  232  nano variable.yaml 
+  233  ansible-playbook -C variable-practice-2.yaml 
+  234  nano variable-practice-2.yaml 
+  235  nano variable.yaml 
+  236  ansible-playbook -C variable-practice-2.yaml 
+  237  ansible-playbook -C variable-practice-2.yaml -e "user_1:oliver_queen"
+  238  ls
+  239  cat inventory 
+  240  nano /etc/hosts
+  241  nano inventory 
+  242  ansible-playbook -C variable-practice-2.yaml -e "user_1:oliver_queen"
+  243  ansible-playbook variable-practice-2.yaml -e "user_1:oliver_queen"
+  244  nano variable-practice-2.yaml 
+  245  nano variable.yaml 
+  246  ansible-playbook variable-practice-2.yaml -e "user_1:oliver_queen"
+  247  ls
+  248  pwd
+  249  mkdir host_vars
+  250  touch dev.example.com prod.example.com test.example.com nohup.example.com
+  251  ls
+  252  cd host_vars
+  253  ls
+  254  touch dev.example.com prod.example.com test.example.com nohup.example.com
+  255  cd ..
+  256  ls
+  257  rm dev.example.com prod.example.com test.example.com nohup.example.com
+  258  ls
+  259  nano variable-practice-2.yaml 
+  260  touch variables-host-var.yaml
+  261  ls
+  262  nano variables-host-var.yaml 
+  263  cd host_vars/
+  264  nano dev.example.com 
+  265  echo "user_name: barry" > dev.example.com 
+  266  echo "user_name: oliver" > prod.example.com
+  267  echo "user_name: caitlin" > test.example.com
+  268  echo "user_name: frost" > nohup.example.com
+  269  cd .. 
+  270  nano variables-host-var.yaml 
+  271  ansible-playbook -C variables-host-var.yaml 
+  272  nano variables-host-var.yaml 
+  273  ansible-playbook -C variables-host-var.yaml 
+  274  nano variables-host-var.yaml 
+  275  ls
+  276  cd host_vars
+  277  echo dev.example.com 
+  278  cat dev.example.com 
+  279  cat prod.example.com 
+  280  cat test.example.com 
+  281  cat nohup.example.com 
+  282  cd ../
+  283  ls
+  284  nano variables-host-var.yaml 
+  285  ansible-playbook -C variables-host-var.yaml 
+  286  nano variables-host-var.yaml 
+  287  echo /host_vars/dev.example.com 
+  288  cat /host_vars/dev.example.com 
+  289  cat host_vars/dev.example.com 
+  290  ansible-playbook -C variables-host-var.yaml 
+  291  ls
+  292  cd host_vars
+  293  ls
+  294  cat *
+  295  ls
+  296  touch dev.yaml test.yaml prod.yaml nohup.yaml
+  297  echo "user_name: harry" > dev.yaml
+  298  echo "user_name: ron" > test.yaml
+  299  echo "user_name: draco" > prod.yaml
+  300  echo "user_name: tom" > nohup.yaml
+  301  cd ..
+  302  ansible-playbook -C variables-host-var.yaml 
+  303  mkdir group_vars
+  304  cp host_vars/*.yaml group_vars/
+  305  cd group_vars/
+  306  ls
+  307  cat *
+  308  cd ..
+  309  ls
+  310  ansible-playbook -C variables-host-var.yaml 
+  311  rm -rf host_vars/*.yaml
+  312  cd host_vars/
+  313  cd ..
+  314  cat inventory 
+  315  nano inventory 
+  316  rm -rf host_vars/
+  317  ansible-playbook -C variables-host-var.yaml 
+  318  ansible-playbook variables-host-var.yaml 
+  319  cat group_vars/*
+  320  ansible all -m command -a " {{ user_name }} "
+  321  ansible all -m command -a "id {{ user_name }} "
+  322  ansible all -m command -a "id {{ user_name }}"
+  323  nano array-play.yaml
+  324  touch array.yaml
+  325  nano array.yaml
+  326  ansible-playbook -C array-play.yaml 
+  327  nano array-play.yaml
+  328  ansible-playbook -C array-play.yaml 
+  329  nano array-play.yaml
+  330  ansible-playbook -C array-play.yaml 
+  331  nano array-play.yaml
+  332  ls
+  333  cat array.yaml 
+  334  nano array-play.yaml
+  335  ansible-playbook -C array-play.yaml 
+  336  nano array-play.yaml
+  337  ansible-playbook -C array-play.yaml 
+  338  ansible-playbook array-play.yaml 
+  339  ansible -m command -a "id {{ custom.dev.user }}"
+  340  ansible -m command -a "id {{ custom.dev.user }}" -e "@array.yaml"
+  341  ansible -m command -a "id {{ custom.dev.user }}" --extra-vars "@array.yaml"
+  342  ansible -m command -a "id {{ custom.dev.user }}" --extra-vars "array.yaml"
+  343  cat array.yaml 
+  344  nano register-playbook.yaml
+  345  ansible-playbook -C register-playbook.yaml 
+  346  ansible-playbook register-playbook.yaml 
+  347  ansible --help
+  348  ll
+  349  nano array-play.yaml 
+  350  ansible-playbook array-play.yaml -e array.yaml
+  351  ansible all -m command -a "id {{ user_name }} "
+  352  ansible all -m command -a "id {{ custom.dev.user }}" --extra-vars array.yaml
+  353  cat array.yaml 
+  354  ansible all -m command -a "id {{ custom.dev.user }}" -e array.yaml
+  355  git
+  356  ansible-vault create vault.yaml
+  357  ls
+  358  nano playbook.yaml
+  359  nano secret-playbook.yaml
+  360  ansible-playbook secret-playbook.yaml 
+  361  nano secret-playbook.yaml
+  362  ansible-playbook secret-playbook.yaml 
+  363  nano secret-playbook.yaml
+  364  ansible-playbook secret-playbook.yaml 
+  365  nano secret-playbook.yaml
+  366  ansible-playbook secret-playbook.yaml 
+  367  ls
+  368  nano secret-playbook.yaml
+  369  ansible-playbook secret-playbook.yaml 
+  370  ansible-playbook secret-playbook.yaml --ask-vault-pass
+  371  nano secret-playbook.yaml
+  372  nano vault.yaml 
+  373  ansible-vault edit vault.yaml 
+  374  nano secret-playbook.yaml
+  375  ansible-playbook secret-playbook.yaml --ask-vault-pass
+  376  ansible-vault edit vault.yaml 
+  377  nano secret-playbook.yaml
+  378  git init
+  379  git config --global init.defaultBranch main
+  380  git remote add origin https://github.com/kbombarde/Ansible-Training-SpanLabs.git
+  381  git status
+  382  git add.
+  383  git add .
+  384  git status
+  385  git commit -m "tarining data commit one"
+  386  git status
+  387  git push
+  388  git push origin -u main
+  389  git push origin -u master
+  390  ssh root@serverd
+  391  ssh root@dev.example.com
+  392  cd ..
+  393  nano facts.yaml 
+  394  ansible-playbook facts.yaml 
+  395  ssh root@servera
+  396  ls
+  397  ssh root@dev.example.com
+  398  ls
+  399  cd ansible/
+  400  ls
+  401  ll
+  402  ansible-playbook secret-playbook.yaml --ask-vault-pass
+  403  touch password.txt
+  404  nano password.txt
+  405  ansible-playbook secret-playbook.yaml --vault-password-file password.txt
+  406  echo vault.yaml
+  407  cat vault.yaml
+  408  cat password.txt
+  409  ansible-playbook secret-playbook.yaml --vault-password-file=password.txt
+  410  ansible-playbook secret-playbook.yaml --vault-password-file password.txt
+  411  ansible-vault view vault.yaml
+  412  ansible-vault view vault.yaml --vault-password-file password.txt
+  413  ansible-vault vault.yaml rekey
+  414  ansible-vault rekey vault.yaml
+  415  nano password.txt
+  416  cat password.txt
+  417  touch loops-1.yaml
+  418  nano loops-1.yaml 
+  419  ansible-playbook -C loops-1.yaml 
+  420  nano loops-1.yaml 
+  421  ansible-playbook -C loops-1.yaml 
+  422  nano loops-1.yaml 
+  423  ansible-playbook -C loops-1.yaml 
+  424  nano loops-1.yaml 
+  425  ansible-playbook -C loops-1.yaml 
+  426  nano loops-1.yaml 
+  427  ansible-playbook -C loops-1.yaml 
+  428  ansible-playbook loops-1.yaml 
+  429  ansible all-m command -a "tail -6 /etc/passwd"
+  430  ansible all -m command -a "tail -6 /etc/passwd"
+  431  ansible all -m command -a "tail -3 /etc/passwd"
+  432  ansible dev -m command -a "tail -3 /etc/passwd"
+  433  nano loops-1.yaml 
+  434  ansible-playbook -C loops-1.yaml 
+  435  nano loops-1.yaml 
+  436  ansible-playbook -C loops-1.yaml 
+  437  nano loops-1.yaml 
+  438  ansible-playbook -C loops-1.yaml 
+  439  nano loops-1.yaml 
+  440  ansible-playbook -C loops-1.yaml 
+  441  nano loops-1.yaml 
+  442  ansible-playbook -C loops-1.yaml 
+  443  nano loops-1.yaml 
+  444  ansible-playbook -C loops-1.yaml 
+  445  nano loops-1.yaml 
+  446  nano package-list.yaml
+  447  nano loops-2.yaml
+  448  ll
+  449  nano loops-2.yaml
+  450  nano package-list.yaml
+  451  ansible-playbook -C loops-2.yaml 
+  452  nano package-list.yaml
+  453  nano loops-2.yaml
+  454  nano package-list.yaml
+  455  ansible-playbook -C loops-2.yaml 
+  456  nano loops-2.yaml
+  457  ansible-playbook -C loops-2.yaml 
+  458  nano loops-2.yaml
+  459  ansible-playbook -C loops-2.yaml 
+  460  nano loops-2.yaml
+  461  ansible-playbook -C loops-2.yaml 
+  462  nano loops-2.yaml
+  463  ansible-playbook -C loops-2.yaml 
+  464  nano package-list.yaml
+  465  ansible-playbook loops-2.yaml 
+  466  nano loops-2.yaml
+  467  ansible-playbook loops-2.yaml 
+  468  nano loops-2.yaml
+  469  ansible-playbook loops-2.yaml 
+  470  nano loops-2.yaml
+  471  ansible-playbook loops-2.yaml 
+  472  nano loops-2.yaml
+  473  ansible-playbook loops-2.yaml 
+  474  nano loops-2.yaml
+  475  ansible-playbook loops-2.yaml 
+  476  nano loops-2.yaml
+  477  mkdir test-files
+  478  cd test-files/
+  479  touch a.txt b.txt
+  480  ls
+  481  nano loop3.yaml
+  482  nano loops-2.yaml
+  483  nano loops-1.yaml
+  484  mv loop3.yaml /..
+  485  ls
+  486  cd ..
+  487  ls
+  488  ll
+  489  cd /..
+  490  ls
+  491  cd 
+  492  ls
+  493  cd /
+  494  mv loop3.yaml ansible
+  495  cd
+  496  cd ansible/
+  497  ll
+  498  cd /
+  499  ls
+  500  cd ansible
+  501  cd
+  502  cd ansible
+  503  ls
+  504  nano loops-3.yaml
+  505  ll
+  506  ansible-playbook -C loops-3.yaml 
+  507  ansible-playbook loops-3.yaml 
+  508  nano loops-3.yaml
+  509  nano loops-2.yaml
+  510  ansible-playbook -C loops-2.yaml 
+  511  nano loops-2.yaml
+  512  ansible-playbook -C loops-2.yaml 
+  513  nano loops-2.yaml
+  514  nano loops-3.yaml
+  515  ansible-playbook -C loops-3.yaml 
+  516  nano loops-3.yaml
+  517  ansible-playbook -C loops-3.yaml 
+  518  nano loops-3.yaml
+  519  nano loops-4.yaml
+  520  nano loops-4.yaml
+  521  ansible-playbook -C loops-4.yaml 
+  522  ansible-playbook loops-4.yaml 
+  523  nano loops-4.yaml
+  524  ll
+  525  nano loops-4.yaml
+  526  nano facts.yaml
+  527  ansible dev -m setup
+  528  nano facts.yaml
+  529  ansible-playbook -C facts.yaml 
+  530  nano facts.yaml
+  531  ansible-playbook -C facts.yaml 
+  532  nano facts.yaml
+  533  ansible-playbook -C facts.yaml 
+  534  nano facts.yaml
+  535  ansible-playbook -C facts.yaml 
+  536  nano facts.yaml
+  537  ansible-playbook -C facts.yaml 
+  538  nano facts.yaml
+  539  ansible-playbook -C facts.yaml 
+  540  nano facts.yaml
+  541  ansible-playbook -C facts.yaml 
+  542  nano facts.yaml
+  543  ansible-playbook -C facts.yaml 
+  544  nano facts.yaml
+  545  ansible-playbook -C facts.yaml 
+  546  nano facts.yaml
+  547  ansible-playbook -C facts.yaml 
+  548  nano facts.yaml
+  549  ansible-playbook -C facts.yaml 
+  550  nano facts.yaml
+  551  ansible-playbook -C facts.yaml 
+  552  nano facts.yaml
+  553  ansible-playbook -C facts.yaml 
+  554  nano facts.yaml
+  555  ansible-playbook -C facts.yaml 
+  556  nano facts.yaml
+  557  ansible-playbook -C facts.yaml 
+  558  nano facts.yaml
+  559  nano conditionals.yaml
+  560  ansible-playbook -C conditionals.yaml 
+  561  nano conditionals.yaml
+  562  ansible-playbook -C conditionals.yaml 
+  563  nano conditionals.yaml
+  564  ansible-playbook -C conditionals.yaml 
+  565  ansible-playbook conditionals.yaml 
+  566  ansible-playbook -C conditionals.yaml 
+  567  nano conditionals.yaml
+  568  ansible-playbook conditionals.yaml 
+  569  nano conditionals.yaml
+  570  ansible-playbook conditionals.yaml 
+  571  nano conditionals.yaml
+  572  ansible-playbook conditionals.yaml 
+  573  nano conditionals.yaml
+  574  ansible-playbook conditionals.yaml 
+  575  nano handlers.yaml
+  576  ansible-playbook handlers.yaml 
+  577  nano handlers.yaml
+  578  ansible-playbook handlers.yaml 
+  579  cd ..
+  580  pws
+  581  pwd
+  582  ls
+  583  cd /
+  584  ls
+  585  pwd
+  586  ll
+  587  cd home
+  588  ls
+  589  cd student
+  590  echo index.html >> "Hello World !"
+  591  cd /
+  592  ls
+  593  cd ans
+  594  ll
+  595  cd ansible
+  596  ls
+  597  cd 
+  598  ls
+  599  cd ansible
+  600  ansible-playbook handlers.yaml 
+  601  nano handlers.yaml
+  602  ansible-playbook handlers.yaml 
+  603  cd home
+  604  cd /
+  605  cd home
+  606  ll
+  607  cd student
+  608  ll
+  609  nano index.html
+  610  cd 
+  611  cd ansible
+  612  ansible-playbook handlers.yaml 
+  613  nano block-resuce.yaml
+  614  ansible-playbook -C block-resuce.yaml 
+  615  nano block-resuce.yaml
+  616  ansible-playbook -C block-resuce.yaml 
+  617  nano block-resuce.yaml
+  618  ansible-playbook -C block-resuce.yaml 
+  619  nano block-resuce.yaml
+  620  ansible-playbook -C block-resuce.yaml 
+  621  nano block-resuce.yaml
+  622  ansible-playbook -C blo
+  623  nano inventory 
+  624  nano block-resuce.yaml
+  625  nano inventory 
+  626  ansible-playbook -C block-resuce.yaml 
+  627  nano block-resuce.yaml
+  628  ansible-playbook -C block-resuce.yaml 
+  629  ansible-playbook block-resuce.yaml 
+  630  cd 
+  631  cd home
+  632  cd /home/student
+  633  ll
+  634  touch backup.html
+  635  ls
+  636  cd /ansible
+  637  cd 
+  638  cd ansible/
+  639  ansible-playbook block-resuce.yaml 
+  640  nano block-resuce.yaml
+  641  cd /home/student
+  642  ls
+  643  rm -rf backup.html 
+  644  ls
+  645  cd
+  646  cd ansible/
+  647  ansible-playbook block-resuce.yaml 
+  648  nano block-resuce.yaml
+  649  ansible-playbook block-resuce.yaml 
+  650  nano block-resuce.yaml
+  651  ansible-playbook block-resuce.yaml 
+  652  nano block-resuce.yaml
+  653  ansible-playbook block-resuce.yaml 
+  654  nano block-resuce.yaml
+  655  ansible-playbook block-resuce.yaml 
+  656  nano block-resuce.yaml
+  657  ansible-playbook block-resuce.yaml 
+  658  ll
+  659  nano block-resuce.yaml
+  660  ansible-playbook block-resuce.yaml 
+  661  nano block-resuce.yaml
+  662  y
+  663  ssh root@dev.example.com
+  664  ll
+  665  cd ansible/
+  666  ll
+  667  nano block-resuce.yaml
+  668  ansible-playbook block-resuce.yaml 
+  669  nano block-resuce.yaml
+  670  ansible-playbook block-resuce.yaml 
+  671  nano block-resuce.yaml
+  672  ls
+  673  nano templating.yaml
+  674  nano template.j2
+  675  nano templating.yaml
+  676  nano template.j2
+  677  ansible-playbook -C templating.yaml 
+  678  nano template.j2
+  679  ansible-playbook -C templating.yaml 
+  680  ansible-playbook templating.yaml 
+  681  ansible all -m command -a "cat /tmp/welcome.txt"
+  682  nano template.j2
+  683  ansible-playbook templating.yaml 
+  684  ansible all -m command -a "cat /tmp/welcome.txt"
+  685  cat templating.yaml 
+  686  ssh root@serverd
+  687  cd ..
+  688  ssh root@nohup.example.com
+  689  ssh root@dev.example.com
+  690  ssh root@test.example.com
+  691  ssh root@prod.example.com
+  692  ssh root@nohup.example.com
+  693  ssh root@dev.example.com
+  694  ssh root@test.example.com
+  695  ssh root@product.example.com
+  696  ssh root@prod.example.com
+  697  ssh root@dev.example.com
+  698  ssh root@test.example.com
+  699  ssh root@dev.example.com
+  700  ssh root@test.example.com
+  701  ssh test.example.com
+  702  ssh prod.example.com
+  703  ssh test.example.com
+  704  ssh nohup.example.com
+  705  cd /etc
+  706  ls
+  707  cat motd
+  708  ll
+  709  nano motd
+  710  cat motd.d
+  711  cd /
+  712  cd
+  713  cd ansible/
+  714  nano motd-update.yaml
+  715  nano template.j2 
+  716  ansible-playbook -C motd-update.yaml 
+  717  ansible-playbook motd-update.yaml 
+  718  nano template.j2 
+  719  ansible-playbook motd-update.yaml 
+  720  nano template.j2 
+  721  ansible-playbook motd-update.yaml 
+  722  nano template.j2 
+  723  nano motd-update.yaml
+  724  nano ports.j2
+  725  nano ports.yaml
+  726  ansible-playbook -C ports.yaml 
+  727  ansible-playbook ports.yaml 
+  728  ansible dev -m command -a "cat /tmp/ports.txt"
+  729  nano ports.j2
+  730  nano ports.yaml
+  731  ansible-playbook ports.yaml 
+  732  nano ports.yaml
+  733  ansible-playbook ports.yaml 
+  734  nano service-status.yaml
+  735  nano service-status.j2
+  736  y
+  737  nano service-status.yaml
+  738  nano service-status.j2
+  739  nano service-status.yaml
+  740  ansible-playbook -C service-status.yaml
+  741  nano service-status.yaml
+  742  ansible-playbook -C service-status.yaml
+  743  ansible-playbook service-status.yaml
+  744  nano service-status.yaml
+  745  ansible-playbook service-status.yaml
+  746  nano service-status.j2
+  747  nano service-status.yaml\
+  748  nano service-status.yaml
+  749  ansible-playbook service-status.yaml
+  750  ansible-playbook dev -m command -a "cat /tmp/service-status.j2"
+  751  nano service-status.yaml
+  752  ansible dev -m command -a "cat /tmp/service-status.j2"
+  753  nano service-status.yaml
+  754  ansible dev -m command -a "cat /tmp/service-status.j2"
+  755  ansible-playbook service-status.yaml
+  756  ansible dev -m command -a "cat /tmp/service-status.j2"
+  757  ls
+  758  cd group_vars/
+  759  ls
+  760  ll
+  761  cat dev.yaml 
+  762  getenforce
+  763  vim etc/selinux/config
+  764  ls
+  765  cd ls
+  766  cd ..
+  767  ls
+  768  mkdir backup
+  769  mv *.yaml backup/
+  770  ls
+  771  mv *.j2 backup/
+  772  mv *.tx backup/
+  773  mv *.txt backup/
+  774  ls
+  775  ll
+  776  nano webserver.yaml
+  777  ansible-playbook -C webserver.yaml 
+  778  ansible-playbook webserver.yaml 
+  779  nano webserver.yaml
+  780  ansible-playbook webserver.yaml 
+  781  nano webserver.yaml
+  782  ansible-playbook -C webserver.yaml 
+  783  ansible-playbook webserver.yaml 
+  784  nano webserver.yaml
+  785  ansible-playbook webserver.yaml 
+  786  ls
+  787  cd group_vars/
+  788  ls
+  789  nano dev.yaml
+  790  ls
+  791  rm -rf nohup.yaml
+  792  rm -rf test.yaml
+  793  ll
+  794  nano dev.yaml
+  795  nano prod.yaml
+  796  cat *
+  797  cd ..
+  798  nano custom.conf.j2
+  799  ls
+  800  ll
+  801  cd group_vars/
+  802  ll
+  803  mv prod.yaml test.yaml
+  804  ll
+  805  nano test.yaml 
+  806  cd ..
+  807  ll
+  808  nano index.html.j2
+  809  ll
+  810  cp webserver.yaml web-deploy.html
+  811  nano web-deploy.html 
+  812  ansible all -m command -a "firewall-cmd --add-port=80/tcp"
+  813  nano web-deploy.html 
+  814  cp web-deploy.html web-deploy.yaml
+  815  nano web-deploy.yaml
+  816  ansible-playbook -C web-deploy.yaml
+  817  ansible-playbook -m ping all
+  818  ansible-playbook all -m ping
+  819  ansible-playbook -m ping dev
+  820  ansible all -m ping
+  821  cd group_vars/
+  822  ls
+  823  cat *
+  824  cd ..
+  825  ansible all -m ping
+  826  ansible-playbook -C web-deploy.yaml
+  827  cat inventory 
+  828  ls
+  829  nano web-deploy.yaml 
+  830  ansible-playbook -C web-deploy.yaml
+  831  nano web-deploy.yaml 
+  832  cd group_vars/
+  833  ls
+  834  mv test.yaml nohup.yaml
+  835  nano nohup.yaml 
+  836  ansible-playbook -C web-deploy.yaml
+  837  cd ..
+  838  ansible-playbook -C web-deploy.yaml
+  839  ansible-playbook web-deploy.yaml
+  840  nano index.html.j2 
+  841  ansible-playbook web-deploy.yaml
+  842  nano index.html.j2 
+  843  ansible-playbook web-deploy.yaml
+  844  nano web-deploy.yaml 
+  845  cd group_vars/
+  846  ls
+  847  nano prod.yaml
+  848  ansible-playbook web-deploy.yaml
+  849  cd ..
+  850  ansible-playbook web-deploy.yaml
+  851  cd group_vars/
+  852  ls
+  853  cat *
+  854  nano prod.yaml 
+  855  cd ..
+  856  ansible-playbook web-deploy.yaml
+  857  nano index.html.j2 
+  858  ansible-playbook web-deploy.yaml
+  859  ls
+  860  mv *.j2 backup
+  861  mv *.yaml backup
+  862  mv *.html backup
+  863  ls
+  864  cd backup
+  865  ll
+  866  cd ..
+  867  ls
+  868  ll
+  869  mv test-files/ backup
+  870  mv group_vars/ backup/
+  871  ll
+  872  mv variable backup/
+  873  mkdir role
+  874  cd role 
+  875  ansible-galaxy init web-server
+  876  ll
+  877  ls
+  878  cd web-server/
+  879  ll
+  880  cd ..
+  881  tree web-server/
+  882  cd ..
+  883  ll
+  884  mv role roles
+  885  ls
+  886  tree eoles
+  887  tree roles
+  888  cd roles/web-server/defaults/
+  889  ls
+  890  nano main.yml
+  891  cd ..
+  892  ll
+  893  cd tasks
+  894  cd ..
+  895  cat defaults/
+  896  cat defaults/*
+  897  ls
+  898  nano master.yaml
+  899  y
+  900  nano master.yaml
+  901  ls
+  902  mv master.yaml ../..
+  903  cd ../..
+  904  ll
+  905  ls
+  906  cd role
+  907  cd roles
+  908  ls
+  909  cd web-server/
+  910  ls
+  911  cd tasks
+  912  cd ..
+  913  nano defaults/main.yml 
+  914  nano handlers/main.yml 
+  915  nano templates/httpd.conf.j2
+  916  nano vars/main.yml 
+  917  nano tasks/main.yml 
+  918  nano handlers/main.yml 
+  919  cd ../..
+  920  nano master.yaml 
+  921  ansible-playbook -C master.yaml 
+  922  cd roles
+  923  ls
+  924  cd ..
+  925  nano master.yaml 
+  926  ansible-playbook -C master.yaml 
+  927  cd roles/
+  928  cd web-server/
+  929  ll
+  930  nano tasks/main.yml 
+  931  nano templates/httpd.conf.j2 
+  932  cd ../..
+  933  nano master.yaml 
+  934  ansible-playbook -C master.yaml 
+  935  ansible-playbook master.yaml 
+  936  cd roles/web-server/
+  937  nano tasks/
+  938  ls
+  939  nano tasks/main.yml 
+  940  ansible-playbook master.yaml 
+  941  cd ../..
+  942  ansible-playbook master.yaml 
+  943  nano roles/web-server/tasks/main.yml 
+  944  nano roles/web-server/templates/httpd.conf.j2 
+  945  git remote add https://github.com/kbombarde/Ansible-Training-SpanLabs.git
+  946  cd 
+  947  cd ansible/
+  948  ls
+  949  hit init
+  950  git init
+  951  git remote add https://github.com/kbombarde/Ansible-Training-SpanLabs.git
+  952  git add .
+  953  git status
+  954  git commit -m "Initial commit"
+  955  git remote add origin https://github.com/kbombarde/Ansible-Training-SpanLabs.git
+  956  git push -u origin master
+  957  cd /
+  958  ssh-keygen -t 2048 -b rsa -C "kbombarde15@gmail.com"
+  959  ssh-keygen -t rsa -b 2048 -C "kbombarde15@gmail.com"
+  960  cat ~/.ssh/id_rsa.pub 
+  961  ssh -T git@github.com
+  962  git push -u origin master
+  963  cd 
+  964  cd ansible/
+  965  git status
+  966  git push
+  967  git push origin -u master
+  968  ls
+  969  cd /.git
+  970  git remote set-url origin git@github.com:kbombarde/Ansible-Training-SpanLabs.git
+  971  git remote -v
+  972  git add .
+  973  git status
+  974  git push -u origin master
+  975  ansible doc -l
+  976  ansible-doc -l
+  977  ansible-galaxy collection install redhat.rhel_system_roles.firewall_lib
+  978  ansible-galaxy collection install redhat.rhel_system_roles.firewall
+  979  ansible-galaxy collection install redhat.rhel_system_roles
+  980  ansible-galaxy collection install ansible.posix.firewalld
+  981  ansible-galaxy collection install ansible.posix
+  982  ls
+  983  nano firewall-bypass.yaml
+  984  ansible-playbook -C firewall-bypass.yaml 
+  985  nano firewall-bypass.yaml
+  986  ansible-playbook -C firewall-bypass.yaml 
+  987  nano firewall-bypass.yaml
+  988  ansible-playbook -C firewall-bypass.yaml 
+  989  nano firewall-bypass.yaml
+  990  ansible-playbook -C firewall-bypass.yaml 
+  991  nano firewall-bypass.yaml
+  992  ansible-playbook -C firewall-bypass.yaml 
+  993  nano firewall-bypass.yaml
+  994  ansible-playbook -C firewall-bypass.yaml 
+  995  ansible-playbook firewall-bypass.yaml 
+  996  nano firewall-bypass.yaml
+  997  ansible-playbook firewall-bypass.yaml 
+  998  nano firewall-bypass.yaml
+  999  ansible-playbook firewall-bypass.yaml 
+ 1000  nano firewall-bypass.yaml
+ 1001  ansible-playbook firewall-bypass.yaml 
+ 1002  nano firewall-bypass.yaml
+ 1003  ansible-playbook firewall-bypass.yaml 
+ 1004  nano firewall-bypass.yaml
+ 1005  ansible-playbook firewall-bypass.yaml 
+ 1006  nano firewall-bypass.yaml
+ 1007  ansible-playbook firewall-bypass.yaml 
+ 1008  nano firewall-bypass.yaml
+ 1009  ansible-playbook firewall-bypass.yaml 
+ 1010  ls
+ 1011  cd roles
+ 1012  ls
+ 1013  ansible-galaxy init nginx
+ 1014  ls
+ 1015  cd nginx
+ 1016  tree
+ 1017  cd 
+ 1018  cd ansible/
+ 1019  nano roles/nginx/vars/main.yml 
+ 1020  nano roles/nginx/handlers/main.yml 
+ 1021  nano roles/nginx/tasks/main.yml 
+ 1022  nano master-nginx.yaml
+ 1023  ll
+ 1024  ansible-playbook -C master-nginx.yaml 
+ 1025  nano roles/nginx/handlers/main.yml 
+ 1026  y
+ 1027  ls
+ 1028  ansible-playbook -C master-nginx.yaml 
+ 1029  ansible-playbook master-nginx.yaml 
+ 1030  nano roles/nginx/tasks/main.yml 
+ 1031  ansible-playbook master-nginx.yaml 
+ 1032  nano roles/nginx/tasks/main.yml 
+ 1033  ansible-playbook master-nginx.yaml 
+ 1034  cat roles/nginx/tasks/main.yml 
+ 1035  ls
+ 1036  nano master-nginx.yaml 
+ 1037  nano roles/nginx/handlers/main.yml 
+ 1038  cat roles/nginx/handlers/main.yml 
+ 1039  ls
+ 1040  cd ..
+ 1041  ls
+ 1042  zip -r output.zip ansible/
+ 1043  ls
+ 1044  mv output.zip Desktop/ansible_practice_data.zip
+ 1045  cd Desktop
+ 1046  ls
+ 1047  history
+ 1048  history > commands.txt
